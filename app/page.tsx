@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, BadgeCheck, CheckCheck, CheckCircle2, Clock, FileCheck2, FolderLock, Link2, Lock, Menu, MonitorSmartphone, QrCode, ShieldCheck, Sparkles, TrendingUp, X } from "lucide-react";
+import { ArrowRight, BadgeCheck, CheckCheck, CheckCircle2, Clock, FileCheck2, FolderLock, Link2, Lock, Menu, MonitorSmartphone, QrCode, ShieldCheck, Sparkles, TrendingUp, X, Zap } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -53,6 +53,11 @@ const instantValueBullets = [
     icon: MonitorSmartphone,
     label: "Funciona en cualquier dispositivo",
     description: "Gestiona desde la app WOSS o la versión web, siempre sincronizado.",
+  },
+  {
+    icon: Zap,
+    label: "Comparte a la velocidad de un clic",
+    description: "Envía documentos y verificaciones al instante, sin demoras ni complicaciones.",
   },
 ];
 const plans = [
