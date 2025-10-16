@@ -181,7 +181,7 @@ function Header() {
           <Link href="/" className="flex items-center justify-center" aria-label="WOSS ID inicio">
             <div className="relative w-[min(14.5rem,60vw)] max-w-[60vw] aspect-[3.667] overflow-hidden sm:w-[19.7rem] sm:max-w-none">
               <Image
-                src={headerLogoSrc}
+                src={footerLogoSrc}
                 alt="WOSS ID"
                 fill
                 priority
