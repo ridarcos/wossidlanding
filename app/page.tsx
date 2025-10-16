@@ -161,8 +161,8 @@ export default function Page() {
 }
 function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 bg-[var(--woss-navy)]/85 backdrop-blur">
-      <div className="mx-auto grid max-w-7xl grid-cols-[auto_auto_auto] items-center gap-4 px-4 py-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-white/5 bg-[var(--woss-navy)] backdrop-blur">
+      <div className="mx-auto grid max-w-7xl grid-cols-[auto_auto_auto] items-center gap-4 px-4 py-2 sm:px-6 lg:px-8">
         <nav className="hidden items-center gap-6 text-sm font-medium text-[var(--woss-slate)] sm:flex">
           <Link href="#valor" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
             Beneficios
@@ -179,13 +179,13 @@ function Header() {
         </nav>
         <div className="flex justify-center">
           <Link href="/" className="flex items-center justify-center" aria-label="WOSS ID inicio">
-            <div className="relative w-[min(14.5rem,60vw)] max-w-[60vw] aspect-[3.667] overflow-hidden sm:w-[19.7rem] sm:max-w-none">
+            <div className="relative w-[min(7.25rem,30vw)] max-w-[30vw] aspect-[3.667] overflow-hidden sm:w-[9.85rem] sm:max-w-none">
               <Image
                 src={headerLogoSrc}
                 alt="WOSS ID"
                 fill
                 priority
-                sizes="(min-width: 640px) 330px, 60vw"
+                sizes="(min-width: 640px) 158px, 30vw"
                 className="h-full w-full object-contain"
               />
             </div>
@@ -201,13 +201,13 @@ function Header() {
           <Button
             asChild
             size="sm"
-            className="rounded-2xl bg-gradient-to-r from-[var(--woss-blue)] via-[var(--woss-uv)] to-[var(--woss-blue)] px-5 py-2 text-sm font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-[var(--woss-uv)] hover:via-[var(--woss-blue)] hover:to-[var(--woss-uv)] focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
+            className="rounded-2xl bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 px-5 py-2 text-sm font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-gray-200 hover:via-gray-400 hover:to-gray-200 focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
           >
             <Link href="/onboarding">Crear mi WOSS ID</Link>
           </Button>
         </div>
       </div>
-      <nav className="mx-auto flex max-w-7xl items-center justify-center gap-3 px-4 pb-4 text-xs font-medium text-[var(--woss-slate)] sm:hidden">
+      <nav className="mx-auto flex max-w-7xl items-center justify-center gap-3 px-4 pb-2 text-xs font-medium text-[var(--woss-slate)] sm:hidden">
         <Link href="#valor" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
           Beneficios
         </Link>
@@ -260,7 +260,7 @@ function HeroSection() {
           <Button
             asChild
             size="lg"
-            className="rounded-2xl bg-gradient-to-r from-[var(--woss-blue)] via-[var(--woss-uv)] to-[var(--woss-blue)] px-6 py-3 text-base font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-[var(--woss-uv)] hover:via-[var(--woss-blue)] hover:to-[var(--woss-uv)] focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
+            className="rounded-2xl bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 px-6 py-3 text-base font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-gray-200 hover:via-gray-400 hover:to-gray-200 focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
           >
             <Link href="/onboarding">
               👉 Crear mi WOSS ID
@@ -448,7 +448,7 @@ function OfferStack() {
               <Button
                 asChild
                 size="lg"
-                className="mt-auto rounded-2xl bg-gradient-to-r from-[var(--woss-blue)] via-[var(--woss-uv)] to-[var(--woss-blue)] px-6 py-3 text-base font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-[var(--woss-uv)] hover:via-[var(--woss-blue)] hover:to-[var(--woss-uv)] focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
+                className="mt-auto rounded-2xl bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 px-6 py-3 text-base font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-gray-200 hover:via-gray-400 hover:to-gray-200 focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
               >
                 <Link href={plan.href}>{plan.ctaLabel}</Link>
               </Button>
@@ -639,7 +639,7 @@ function FinalCTA() {
             <Button
               asChild
               size="lg"
-              className="rounded-2xl bg-gradient-to-r from-[var(--woss-blue)] via-[var(--woss-uv)] to-[var(--woss-blue)] px-6 py-3 text-base font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-[var(--woss-uv)] hover:via-[var(--woss-blue)] hover:to-[var(--woss-uv)] focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
+              className="rounded-2xl bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 px-6 py-3 text-base font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-gray-200 hover:via-gray-400 hover:to-gray-200 focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
             >
               <Link href="/onboarding">🔹 Crear mi WOSS ID</Link>
             </Button>
@@ -669,7 +669,7 @@ function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-10 sm:px-6 lg:px-8 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-4">
           <Link href="/" className="flex items-center gap-4" aria-label="WOSS ID">
-            <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border border-white/20 bg-[var(--woss-graphite)]/60 p-2 sm:h-16 sm:w-16">
+            <div className="relative h-14 w-14 shrink-0 overflow-hidden sm:h-16 sm:w-16">
               <Image
                 src={footerLogoSrc}
                 alt="Emblema WOSS ID"
