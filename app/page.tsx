@@ -94,7 +94,6 @@ const plans = [
 ];
 const launchBonuses = [
   "🎁 7 dias de vista PRO con tu link personalizado (link personalizado listo para compartir)",
-  "🎁 Sello “Verificado por WOSS” para tus redes y correos",
 ];
 const howItWorksSteps = [
   {
@@ -442,7 +441,7 @@ function OfferStack() {
                       </li>
                     ))}
                   </ul>
-                  <p className="text-xs uppercase tracking-wide text-[var(--woss-uv)]">⏳ Disponible solo para los primeros usuarios</p>
+                  
                 </div>
               )}
               <Button
