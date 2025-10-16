@@ -392,9 +392,10 @@ function InstantValue() {
           </p>
         </div>
         <div className="space-y-3">
-          <h3 className="font-heading text-2xl text-[var(--woss-white)]">Integrado a tu flujo diario</h3>
+          <h3 className="font-heading text-2xl text-[var(--woss-white)]">Velocidad que impulsa tu día</h3>
           <p className="text-sm leading-relaxed text-[var(--woss-slate)]">
-            Conecta tu WOSS ID a CRM, automatiza recordatorios y genera reportes para clientes o aliados. Tus permisos se gestionan en segundos desde el móvil o escritorio.
+            Comparte y gestiona tus documentos con precisión instantánea.
+            WOSS sincroniza tus procesos a la velocidad de tu día, asegurando orden, seguridad y control total desde cualquier dispositivo. Todo fluye sin fricción, en segundos.
           </p>
         </div>
       </div>
