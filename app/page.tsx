@@ -22,6 +22,7 @@ const heroHighlights = [
   "Verificación en menos de 60 segundos",
   "Centro de documentos cifrado",
   "Control total de privacidad",
+  "Sincronización en tiempo real",
 ];
 const heroStats = [
   { value: "8,200+", label: "Identidades WOSS activas" },
