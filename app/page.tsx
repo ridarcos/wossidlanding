@@ -1,8 +1,9 @@
 'use client';
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, BadgeCheck, CheckCheck, CheckCircle2, Clock, FileCheck2, FolderLock, Link2, Lock, MonitorSmartphone, QrCode, ShieldCheck, Sparkles, TrendingUp } from "lucide-react";
+import { ArrowRight, BadgeCheck, CheckCheck, CheckCircle2, Clock, FileCheck2, FolderLock, Link2, Lock, Menu, MonitorSmartphone, QrCode, ShieldCheck, Sparkles, TrendingUp, X } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -159,24 +160,19 @@ export default function Page() {
   );
 }
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navLinks = [
+    { href: "#valor", label: "Beneficios" },
+    { href: "#planes", label: "Planes" },
+    { href: "#testimonios", label: "Testimonios" },
+    { href: "#faq", label: "FAQ" },
+  ];
+
   return (
     <header className="sticky top-0 z-50 bg-[var(--woss-navy)] backdrop-blur shadow-lg shadow-gray-400/50">
-      <div className="mx-auto grid max-w-7xl grid-cols-[auto_auto_auto] items-center gap-4 px-4 py-2 sm:px-6 lg:px-8">
-        <nav className="hidden items-center gap-6 text-sm font-medium text-[var(--woss-slate)] sm:flex">
-          <Link href="#valor" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
-            Beneficios
-          </Link>
-          <Link href="#planes" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
-            Planes
-          </Link>
-          <Link href="#testimonios" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
-            Testimonios
-          </Link>
-          <Link href="#faq" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
-            FAQ
-          </Link>
-        </nav>
-        <div className="flex justify-center">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 sm:px-6 lg:px-8">
+        <div className="flex items-center">
           <Link href="/" className="flex items-center justify-center" aria-label="WOSS ID inicio">
             <div className="relative w-[min(14.5rem,60vw)] max-w-[60vw] aspect-[3.667] overflow-hidden sm:w-[19.7rem] sm:max-w-none">
               <Image
@@ -190,39 +186,64 @@ function Header() {
             </div>
           </Link>
         </div>
+
+        <nav className="hidden items-center gap-6 text-sm font-medium text-[var(--woss-slate)] sm:flex">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
         <div className="flex items-center justify-end gap-3 sm:gap-4">
-          <Link
-            href="#how-it-works"
-            className="text-sm font-medium text-[var(--woss-slate)] transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
-          >
-            Ver cómo funciona
-          </Link>
           <Button
             asChild
             size="sm"
-            className="rounded-2xl bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 px-5 py-2 text-sm font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-gray-200 hover:via-gray-400 hover:to-gray-200 focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
+            className="hidden sm:flex rounded-2xl bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 px-5 py-2 text-sm font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-gray-200 hover:via-gray-400 hover:to-gray-200 focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
           >
             <Link href="/onboarding">Crear mi WOSS ID</Link>
           </Button>
+          <div className="sm:hidden">
+            <Button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              variant="ghost"
+              size="icon"
+              className="text-white"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              <span className="sr-only">Toggle menu</span>
+            </Button>
+          </div>
         </div>
       </div>
-      <nav className="mx-auto flex max-w-7xl items-center justify-center gap-3 px-4 pb-2 text-xs font-medium text-[var(--woss-slate)] sm:hidden">
-        <Link href="#valor" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
-          Beneficios
-        </Link>
-        <span className="text-[var(--woss-slate)]">|</span>
-        <Link href="#planes" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
-          Planes
-        </Link>
-        <span className="text-[var(--woss-slate)]">|</span>
-        <Link href="#testimonios" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
-          Testimonios
-        </Link>
-        <span className="text-[var(--woss-slate)]">|</span>
-        <Link href="#faq" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
-          FAQ
-        </Link>
-      </nav>
+
+      {isMenuOpen && (
+        <div className="sm:hidden">
+          <nav className="flex flex-col gap-4 px-4 pb-4 text-sm font-medium text-[var(--woss-slate)]">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Button
+              asChild
+              size="sm"
+              className="mt-2 rounded-2xl bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 px-5 py-2 text-sm font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-gray-200 hover:via-gray-400 hover:to-gray-200 focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
+            >
+              <Link href="/onboarding">Crear mi WOSS ID</Link>
+            </Button>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
