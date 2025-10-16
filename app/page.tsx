@@ -669,12 +669,12 @@ function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-10 sm:px-6 lg:px-8 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-4">
           <Link href="/" className="flex items-center gap-4" aria-label="WOSS ID">
-            <div className="relative h-14 w-14 shrink-0 overflow-hidden sm:h-16 sm:w-16">
+            <div className="relative h-28 w-28 shrink-0 overflow-hidden sm:h-32 sm:w-32">
               <Image
                 src={footerLogoSrc}
                 alt="Emblema WOSS ID"
                 fill
-                sizes="96px"
+                sizes="128px"
                 className="h-full w-full object-contain"
               />
             </div>
