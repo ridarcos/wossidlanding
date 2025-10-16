@@ -161,7 +161,7 @@ export default function Page() {
 }
 function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 bg-[var(--woss-navy)] backdrop-blur">
+    <header className="sticky top-0 z-50 bg-[var(--woss-navy)] backdrop-blur shadow-lg shadow-gray-400/50">
       <div className="mx-auto grid max-w-7xl grid-cols-[auto_auto_auto] items-center gap-4 px-4 py-2 sm:px-6 lg:px-8">
         <nav className="hidden items-center gap-6 text-sm font-medium text-[var(--woss-slate)] sm:flex">
           <Link href="#valor" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
@@ -179,13 +179,13 @@ function Header() {
         </nav>
         <div className="flex justify-center">
           <Link href="/" className="flex items-center justify-center" aria-label="WOSS ID inicio">
-            <div className="relative w-[min(7.25rem,30vw)] max-w-[30vw] aspect-[3.667] overflow-hidden sm:w-[9.85rem] sm:max-w-none">
+            <div className="relative w-[min(14.5rem,60vw)] max-w-[60vw] aspect-[3.667] overflow-hidden sm:w-[19.7rem] sm:max-w-none">
               <Image
                 src={headerLogoSrc}
                 alt="WOSS ID"
                 fill
                 priority
-                sizes="(min-width: 640px) 158px, 30vw"
+                sizes="(min-width: 640px) 330px, 60vw"
                 className="h-full w-full object-contain"
               />
             </div>
