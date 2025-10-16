@@ -15,6 +15,8 @@ const fadeInUp = {
 };
 const headerLogoSrc = "/logos/woss-header.png";
 const footerLogoSrc = "/logos/woss-footer.png";
+const physicalCardImage = "/logos/woss-card.png";
+
 const heroHighlights = [
   "Verificación en menos de 60 segundos",
   "Centro de documentos cifrado",
@@ -159,51 +161,53 @@ export default function Page() {
 }
 function Header() {
   return (
-    <header className="mx-auto grid max-w-7xl grid-cols-[auto_auto_auto] items-center gap-4 px-4 py-6 sm:px-6 lg:px-8">
-      <nav className="hidden items-center gap-6 text-sm font-medium text-[var(--woss-slate)] sm:flex">
-        <Link href="#valor" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
-          Beneficios
-        </Link>
-        <Link href="#planes" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
-          Planes
-        </Link>
-        <Link href="#testimonios" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
-          Testimonios
-        </Link>
-        <Link href="#faq" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
-          FAQ
-        </Link>
-      </nav>
-      <div className="flex justify-center">
-        <Link href="/" className="flex items-center justify-center" aria-label="WOSS ID inicio">
-          <div className="relative w-[min(28.875rem,90vw)] max-w-[90vw] aspect-[3.667] overflow-hidden sm:w-[39.375rem] sm:max-w-none">
-            <Image
-              src={headerLogoSrc}
-              alt="WOSS ID"
-              fill
-              priority
-              sizes="(min-width: 640px) 630px, 90vw"
-              className="h-full w-full object-contain"
-            />
-          </div>
-        </Link>
+    <header className="sticky top-0 z-50 border-b border-white/5 bg-[var(--woss-navy)]/85 backdrop-blur">
+      <div className="mx-auto grid max-w-7xl grid-cols-[auto_auto_auto] items-center gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <nav className="hidden items-center gap-6 text-sm font-medium text-[var(--woss-slate)] sm:flex">
+          <Link href="#valor" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
+            Beneficios
+          </Link>
+          <Link href="#planes" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
+            Planes
+          </Link>
+          <Link href="#testimonios" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
+            Testimonios
+          </Link>
+          <Link href="#faq" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
+            FAQ
+          </Link>
+        </nav>
+        <div className="flex justify-center">
+          <Link href="/" className="flex items-center justify-center" aria-label="WOSS ID inicio">
+            <div className="relative w-[min(14.5rem,60vw)] max-w-[60vw] aspect-[3.667] overflow-hidden sm:w-[19.7rem] sm:max-w-none">
+              <Image
+                src={headerLogoSrc}
+                alt="WOSS ID"
+                fill
+                priority
+                sizes="(min-width: 640px) 330px, 60vw"
+                className="h-full w-full object-contain"
+              />
+            </div>
+          </Link>
+        </div>
+        <div className="flex items-center justify-end gap-3 sm:gap-4">
+          <Link
+            href="#how-it-works"
+            className="text-sm font-medium text-[var(--woss-slate)] transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
+          >
+            Ver cómo funciona
+          </Link>
+          <Button
+            asChild
+            size="sm"
+            className="rounded-2xl bg-gradient-to-r from-[var(--woss-blue)] via-[var(--woss-uv)] to-[var(--woss-blue)] px-5 py-2 text-sm font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-[var(--woss-uv)] hover:via-[var(--woss-blue)] hover:to-[var(--woss-uv)] focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
+          >
+            <Link href="/onboarding">Crear mi WOSS ID</Link>
+          </Button>
+        </div>
       </div>
-      <div className="flex items-center justify-end gap-3 sm:gap-4">
-        <Link
-          href="#how-it-works"
-          className="text-sm font-medium text-[var(--woss-slate)] transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
-        >
-          Ver cómo funciona
-        </Link>
-        <Button
-          asChild
-          size="sm"
-          className="rounded-2xl bg-gradient-to-r from-[var(--woss-blue)] via-[var(--woss-uv)] to-[var(--woss-blue)] px-5 py-2 text-sm font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-[var(--woss-uv)] hover:via-[var(--woss-blue)] hover:to-[var(--woss-uv)] focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
-        >
-          <Link href="/onboarding">Crear mi WOSS ID</Link>
-        </Button>
-      </div>
-      <nav className="col-span-3 mt-4 flex items-center justify-center gap-4 text-xs font-medium text-[var(--woss-slate)] sm:hidden">
+      <nav className="mx-auto flex max-w-7xl items-center justify-center gap-3 px-4 pb-4 text-xs font-medium text-[var(--woss-slate)] sm:hidden">
         <Link href="#valor" className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
           Beneficios
         </Link>
@@ -412,6 +416,21 @@ function OfferStack() {
                   </li>
                 ))}
               </ul>
+              {plan.name === "ONE" && (
+                <div className="overflow-hidden rounded-2xl border border-white/10 bg-[var(--woss-navy)]/40 p-4 shadow-inner">
+                  <p className="text-sm font-semibold text-[var(--woss-white)]">Tarjeta física WOSS ONE</p>
+                  <p className="mt-1 text-xs text-[var(--woss-slate)]">Entrega con chip NFC listo para compartir tu pasaporte digital en persona.</p>
+                  <div className="relative mt-4 h-48 w-full">
+                    <Image
+                      src={physicalCardImage}
+                      alt="Tarjeta física WOSS ONE con chip NFC"
+                      fill
+                      sizes="(min-width: 1024px) 440px, (min-width: 640px) 320px, 100vw"
+                      className="rounded-xl object-contain"
+                    />
+                  </div>
+                </div>
+              )}
               {plan.name === "START" && (
                 <div className="space-y-3 rounded-2xl border border-dashed border-[var(--woss-uv)]/40 bg-[var(--woss-uv)]/10 p-4 text-sm text-[var(--woss-slate)]">
                   <p className="font-semibold text-[var(--woss-white)]">Bonos de lanzamiento:</p>
