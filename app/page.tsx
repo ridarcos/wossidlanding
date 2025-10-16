@@ -93,7 +93,7 @@ const plans = [
   },
 ];
 const launchBonuses = [
-  "🎁 1 mes de vista PRO con tu link personalizado (link personalizado listo para compartir)",
+  "🎁 7 dias de vista PRO con tu link personalizado (link personalizado listo para compartir)",
   "🎁 Sello “Verificado por WOSS” para tus redes y correos",
 ];
 const howItWorksSteps = [
@@ -655,7 +655,7 @@ function FinalCTA() {
           <div className="rounded-2xl border border-dashed border-[var(--woss-blue)]/40 bg-[var(--woss-blue)]/10 p-5 text-sm text-[var(--woss-slate)]">
             <p className="text-base font-semibold text-[var(--woss-white)]">🔥 Oferta de lanzamiento</p>
             <p className="mt-2">
-              Activa tu WOSS ID hoy y obtén 1 mes PRO gratuito. Tu identidad digital empieza aquí.
+              Activa tu WOSS ID hoy y obtén 7 dias PRO gratuito. Tu identidad digital empieza aquí.
             </p>
           </div>
         </div>
