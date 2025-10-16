@@ -540,7 +540,7 @@ function HowItWorks() {
       </div>
       <div className="mt-10 flex flex-col items-center gap-3 text-center text-sm text-[var(--woss-slate)]">
         <p className="font-heading text-lg text-[var(--woss-white)]">Todo respaldado por validaciones biométricas y auditoría continua.</p>
-        <p>A partir del paso 3 puedes compartir un link dinámico, incrustar tu QR o integrarlo con automatizaciones.</p>
+        <p>A partir del paso 3 puedes compartir un link dinámico o tu QR.</p>
       </div>
     </motion.section>
   );
