@@ -75,7 +75,7 @@ const plans = [
       "Verificación en tiempo real",
     ],
     badge: {
-      label: "Lanzamiento",
+      label: "Gratis",
       variant: "bg-[var(--woss-uv)] text-[var(--woss-white)]",
     },
   },
