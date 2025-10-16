@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "WOSS ID — Identidad verificada y documentos seguros",
-    description: "Crea tu pasaporte digital y comparte con seguridad.",
+    description: "Crea tu identidad digital y comparte con seguridad.",
     images: ["/og-image.jpg"],
   },
   alternates: {

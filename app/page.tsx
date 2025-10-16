@@ -65,7 +65,7 @@ const plans = [
   {
     name: "START",
     heading: "🚀 PLAN START",
-    description: "Tu pasaporte digital gratuito para compartir con confianza.",
+    description: "Tu identidad digital gratuito para compartir con confianza.",
     ctaLabel: "👉 Crear mi WOSS ID Gratis",
     href: "/onboarding",
     features: [
@@ -446,7 +446,7 @@ function OfferStack() {
               {plan.name === "ONE" && (
                 <div className="overflow-hidden rounded-2xl border border-white/10 bg-[var(--woss-navy)]/40 p-4 shadow-inner">
                   <p className="text-sm font-semibold text-[var(--woss-white)]">Tarjeta física WOSS ONE</p>
-                  <p className="mt-1 text-xs text-[var(--woss-slate)]">Entrega con chip NFC listo para compartir tu pasaporte digital en persona.</p>
+                  <p className="mt-1 text-xs text-[var(--woss-slate)]">Entrega con chip NFC listo para compartir tu identidad digital en persona.</p>
                   <div className="relative mt-4 h-48 w-full">
                     <Image
                       src={physicalCardImage}
@@ -500,7 +500,7 @@ function OfferStack() {
           <div>
             <p className="font-heading text-lg text-[var(--woss-white)]">Soporte cercano</p>
             <p className="mt-2">
-              Asesoría en español por chat y correo para ayudarte a configurar tu pasaporte digital en minutos.
+              Asesoría en español por chat y correo para ayudarte a configurar tu identidad digital en minutos.
             </p>
           </div>
         </div>
@@ -629,7 +629,7 @@ function FAQSection() {
           Resuelve tus dudas en segundos
         </h2>
         <p className="mx-auto max-w-2xl text-base text-[var(--woss-slate)]">
-          Transparencia total sobre cómo funciona tu pasaporte digital WOSS ID.
+          Transparencia total sobre cómo funciona tu identidad digital WOSS ID.
         </p>
       </div>
       <Accordion type="single" collapsible className="space-y-4">
