@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "WOSS ID — Identidad verificada y documentos seguros",
   description:
     "Verifica tu identidad y guarda documentos en un solo lugar. Empieza gratis con START o desbloquea todo con ONE.",
+  icons: {
+    icon: '/logos/woss-favicon.png',
+  },
   metadataBase: new URL("https://woss.id"),
   openGraph: {
     title: "WOSS ID — Identidad verificada y documentos seguros",
