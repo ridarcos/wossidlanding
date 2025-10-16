@@ -3,34 +3,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, BadgeCheck, CheckCheck, CheckCircle2, Clock, FileCheck2, FolderLock, Link2, Lock, MonitorSmartphone, QrCode, ShieldCheck, Sparkles, TrendingUp } from "lucide-react";
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 const fadeInUp = {
   initial: { opacity: 0, y: 12 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: "-80px" },
   transition: { duration: 0.3 },
 };
-
 const headerLogoSrc = "/logos/woss-header.png";
 const footerLogoSrc = "/logos/woss-footer.png";
-
 const heroHighlights = [
   "Verificación en menos de 60 segundos",
   "Centro de documentos cifrado",
   "Control total de privacidad",
 ];
-
 const heroStats = [
   { value: "8,200+", label: "Identidades WOSS activas" },
   { value: "<60 s", label: "Tiempo promedio de verificación" },
   { value: "4.9/5", label: "Calificación en la app WOSS" },
 ];
-
 const instantValueBullets = [
   {
     icon: Lock,
@@ -58,7 +52,6 @@ const instantValueBullets = [
     description: "Gestiona desde la app WOSS o la versión web, siempre sincronizado.",
   },
 ];
-
 const plans = [
   {
     name: "START",
@@ -97,12 +90,10 @@ const plans = [
     },
   },
 ];
-
 const launchBonuses = [
   "🎁 1 mes de vista PRO con tu link personalizado (link personalizado listo para compartir)",
   "🎁 Sello “Verificado por WOSS” para tus redes y correos",
 ];
-
 const howItWorksSteps = [
   {
     icon: BadgeCheck,
@@ -120,13 +111,11 @@ const howItWorksSteps = [
     description: "WOSS ID valida por ti, en tiempo real.",
   },
 ];
-
 const testimonials = [
   "“Dejé de mandar mi INE por WhatsApp. Ahora uso mi link WOSS.”",
   "“Mis clientes confían más, cierro ventas más rápido.”",
   "“Me validaron en segundos, sin estrés ni papeleo.”",
 ];
-
 const faqs = [
   {
     question: "¿Qué datos se muestran al verificarme?",
@@ -149,7 +138,6 @@ const faqs = [
     answer: "START es gratis y esencial. ONE es ilimitado y profesional.",
   },
 ];
-
 export default function Page() {
   return (
     <main className="min-h-screen bg-[var(--woss-navy)] text-[var(--woss-white)] antialiased">
@@ -169,7 +157,6 @@ export default function Page() {
     </main>
   );
 }
-
 function Header() {
   return (
     <header className="mx-auto grid max-w-7xl grid-cols-[auto_auto_auto] items-center gap-4 px-4 py-6 sm:px-6 lg:px-8">
@@ -189,31 +176,31 @@ function Header() {
       </nav>
       <div className="flex justify-center">
         <Link href="/" className="flex items-center justify-center" aria-label="WOSS ID inicio">
-          <div className="relative h-[4.5rem] w-[16.5rem] overflow-hidden sm:h-[6rem] sm:w-[22.5rem]">
+          <div className="relative w-[min(28.875rem,90vw)] max-w-[90vw] aspect-[3.667] overflow-hidden sm:w-[39.375rem] sm:max-w-none">
             <Image
               src={headerLogoSrc}
               alt="WOSS ID"
               fill
               priority
-              sizes="(min-width: 1024px) 360px, (min-width: 640px) 360px, 264px"
+              sizes="(min-width: 640px) 630px, 90vw"
               className="h-full w-full object-contain"
             />
           </div>
         </Link>
       </div>
       <div className="flex items-center justify-end gap-3 sm:gap-4">
-        <Link href="/descargar-app" className="text-sm font-medium text-[var(--woss-slate)] transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
-          Descargar app
-        </Link>
-        <Link href="#how-it-works" className="text-sm font-medium text-[var(--woss-slate)] transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]">
+        <Link
+          href="#how-it-works"
+          className="text-sm font-medium text-[var(--woss-slate)] transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
+        >
           Ver cómo funciona
         </Link>
         <Button
           asChild
           size="sm"
-          className="rounded-2xl bg-[var(--woss-blue)] px-4 py-2 text-sm font-semibold text-[var(--woss-navy)] transition hover:bg-[var(--woss-blue)]/80 focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
-      >
-        <Link href="/onboarding">Comienza Gratis</Link>
+          className="rounded-2xl bg-gradient-to-r from-[var(--woss-blue)] via-[var(--woss-uv)] to-[var(--woss-blue)] px-5 py-2 text-sm font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-[var(--woss-uv)] hover:via-[var(--woss-blue)] hover:to-[var(--woss-uv)] focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
+        >
+          <Link href="/onboarding">Crear mi WOSS ID</Link>
         </Button>
       </div>
       <nav className="col-span-3 mt-4 flex items-center justify-center gap-4 text-xs font-medium text-[var(--woss-slate)] sm:hidden">
@@ -236,7 +223,6 @@ function Header() {
     </header>
   );
 }
-
 function HeroSection() {
   return (
     <motion.section
@@ -270,7 +256,7 @@ function HeroSection() {
           <Button
             asChild
             size="lg"
-            className="rounded-2xl bg-[var(--woss-blue)] px-6 py-3 text-base font-semibold text-[var(--woss-navy)] shadow-lg transition hover:bg-[var(--woss-blue)]/80 focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
+            className="rounded-2xl bg-gradient-to-r from-[var(--woss-blue)] via-[var(--woss-uv)] to-[var(--woss-blue)] px-6 py-3 text-base font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-[var(--woss-uv)] hover:via-[var(--woss-blue)] hover:to-[var(--woss-uv)] focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
           >
             <Link href="/onboarding">
               👉 Crear mi WOSS ID
@@ -338,7 +324,6 @@ function HeroSection() {
     </motion.section>
   );
 }
-
 function InstantValue() {
   return (
     <motion.section
@@ -387,7 +372,6 @@ function InstantValue() {
     </motion.section>
   );
 }
-
 function OfferStack() {
   return (
     <motion.section
@@ -445,7 +429,7 @@ function OfferStack() {
               <Button
                 asChild
                 size="lg"
-                className="mt-auto rounded-2xl bg-[var(--woss-blue)] px-6 py-3 text-base font-semibold text-[var(--woss-navy)] transition hover:bg-[var(--woss-blue)]/80 focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
+                className="mt-auto rounded-2xl bg-gradient-to-r from-[var(--woss-blue)] via-[var(--woss-uv)] to-[var(--woss-blue)] px-6 py-3 text-base font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-[var(--woss-uv)] hover:via-[var(--woss-blue)] hover:to-[var(--woss-uv)] focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
               >
                 <Link href={plan.href}>{plan.ctaLabel}</Link>
               </Button>
@@ -478,7 +462,6 @@ function OfferStack() {
     </motion.section>
   );
 }
-
 function HowItWorks() {
   return (
     <motion.section
@@ -518,7 +501,6 @@ function HowItWorks() {
     </motion.section>
   );
 }
-
 function TestimonialsSection() {
   return (
     <motion.section
@@ -554,7 +536,6 @@ function TestimonialsSection() {
     </motion.section>
   );
 }
-
 function GuaranteeSection() {
   return (
     <motion.section
@@ -587,7 +568,6 @@ function GuaranteeSection() {
     </motion.section>
   );
 }
-
 function FAQSection() {
   return (
     <motion.section
@@ -621,7 +601,6 @@ function FAQSection() {
     </motion.section>
   );
 }
-
 function FinalCTA() {
   return (
     <motion.section
@@ -641,7 +620,7 @@ function FinalCTA() {
             <Button
               asChild
               size="lg"
-              className="rounded-2xl bg-[var(--woss-blue)] px-6 py-3 text-base font-semibold text-[var(--woss-navy)] transition hover:bg-[var(--woss-blue)]/80 focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
+              className="rounded-2xl bg-gradient-to-r from-[var(--woss-blue)] via-[var(--woss-uv)] to-[var(--woss-blue)] px-6 py-3 text-base font-semibold text-[var(--woss-navy)] shadow-lg transition hover:from-[var(--woss-uv)] hover:via-[var(--woss-blue)] hover:to-[var(--woss-uv)] focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
             >
               <Link href="/onboarding">🔹 Crear mi WOSS ID</Link>
             </Button>
@@ -665,7 +644,6 @@ function FinalCTA() {
     </motion.section>
   );
 }
-
 function Footer() {
   return (
     <footer className="border-t border-white/10 bg-[var(--woss-navy)]/90">
@@ -696,12 +674,12 @@ function Footer() {
             >
               www.wossid.com
             </Link>
-            <span className="text-[var(--woss-slate)]">|</span>
+            <span className="hidden text-[var(--woss-slate)] sm:inline">|</span>
             <Link
-              href="/descargar-app"
-              className="transition hover:text-[var(--woss-white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
+              href="/onboarding"
+              className="font-semibold text-[var(--woss-white)] transition hover:text-[var(--woss-blue)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--woss-uv)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--woss-navy)]"
             >
-              Descargar la app WOSS
+              Crear mi WOSS ID
             </Link>
           </div>
           <p className="text-xs text-[var(--woss-slate)]">
@@ -712,3 +690,4 @@ function Footer() {
     </footer>
   );
 }
+
