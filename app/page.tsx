@@ -70,7 +70,7 @@ const plans = [
     href: "/onboarding",
     features: [
       "1 identidad verificada",
-      "Hasta 3 documentos",
+      "1 documento",
       "250 MB de almacenamiento",
       "Link/QR personal",
       "Verificación en tiempo real",
