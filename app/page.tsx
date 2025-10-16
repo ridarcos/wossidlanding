@@ -415,10 +415,10 @@ function OfferStack() {
           💎 La Oferta
         </Badge>
         <h2 className="font-heading text-3xl font-semibold text-[var(--woss-white)] sm:text-4xl">
-          Tu pasaporte digital empieza aquí
+          Tu identidad digital empieza aquí
         </h2>
         <p className="mx-auto max-w-2xl text-base text-[var(--woss-slate)]">
-          Elige cómo iniciar y escala cuando necesites más control o automatización.
+          Elige cómo iniciar y escala cuando necesites más control.
         </p>
       </div>
       <div className="grid gap-8 lg:grid-cols-2">
