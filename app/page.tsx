@@ -57,7 +57,7 @@ const instantValueBullets = [
 const plans = [
   {
     name: "START",
-    heading: "🚀 PLAN START — $0 PARA SIEMPRE",
+    heading: "🚀 PLAN START",
     description: "Tu pasaporte digital gratuito para compartir con confianza.",
     ctaLabel: "👉 Crear mi WOSS ID Gratis",
     href: "/onboarding",
