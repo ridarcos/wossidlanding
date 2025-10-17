@@ -87,11 +87,11 @@ const plans = [
     ctaLabel: "⚡ Actualizar a ONE",
     href: "/onboarding?plan=one",
     features: [
-      "Identidades y documentos ilimitados",
-      "Compartir con permisos y vencimiento",
-      "Tarjeta física WOSS ID con chip NFC",
-      "Panel avanzado de analíticas",
-      "Soporte prioritario",
+      "✅ Identidades y documentos ilimitados",
+      "✅ Compartir con permisos, vencimiento y ubicación en tiempo real",
+      "✅ Tarjeta física WOSS ID con chip NFC",
+      "✅ Panel avanzado de analíticas y actividad",
+      "✅ Soporte prioritario WOSS Care",
     ],
     badge: {
       label: "Más valor",
